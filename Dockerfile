@@ -20,7 +20,7 @@ RUN chmod a+x /usr/bin/jq
 EXPOSE 3306 4567 4568
 ONBUILD RUN yum update -y
 HEALTHCHECK --interval=10s --timeout=3s --retries=15 \
-	CMD /bin/sh /healthcheck.sh || exit 1
+	CMD /bin/sh /healthcheck.sh || exit 
 
 ENTRYPOINT ["/entrypoint.sh"]
 
